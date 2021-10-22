@@ -6,9 +6,14 @@
 * {
   box-sizing: border-box;
 }
+
 h1, h2 {
   padding: 0.25rem;
   margin: 0.25rem;
+}
+
+li {
+  padding-bottom: 0.5rem;
 }
 
 body {
@@ -47,13 +52,23 @@ body {
   }
 }
 
+.curriculum-introduction {
+  padding-top: 0.5rem;
+}
+
 .curriculum-title {
   font-family: $font-family-serif;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: 700;
   padding: 0.5rem;
   @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+    font-size: 38px;
+  }
+}
+
+.curriculum-experience {
+  li > div:first-child {
+    font-weight: 500;
   }
 }
 
@@ -76,4 +91,3 @@ section:nth-child(even) {
     text-align: left;
   }
 }
-
