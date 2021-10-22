@@ -1,12 +1,21 @@
+
+@function addPadding($size, $amount) {
+  @return $size + $amount + rem;
+}
+
 * {
   box-sizing: border-box;
+}
+h1, h2, h3 {
+  padding: 0.25rem;
+  margin: 0.25rem;
 }
 
 body {
   display: flex;
   height: 100vh;
   margin: 0;
-  padding: 2rem;
+  padding: 1rem;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -14,37 +23,44 @@ body {
   color: $uoc-corporate;
 }
 
-.uoc-container {
-  max-width: 800px;
+.curriculum-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 50vw;
   margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
+  border-radius: 1rem;
   background-color: #FFF;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: 350px;
+  h1, h2 {
+    color: $section-header-color;
+  }
+  @media (max-width: $mqMinWidth) {
+    width: 100%;
   }
 }
 
-.uoc-title {
+.curriculum-title {
   font-family: $font-family-serif;
   font-size: 24px;
   font-weight: 700;
-  color: $uoc-corporate;
-
+  padding: 0.5rem;
   @media (min-width: $mqMinWidth) {
     font-size: 36px;
   }
 }
+
+section {
+  padding: addPadding(0.25, 0.25);
+  h3 {
+    color: $section-header-color;
+  }
+}
+section:nth-child(even) {
+  text-align: right;
+  background-color: $uoc-bg;
+  ul {
+    list-style-type: none;
+  }
+}
+

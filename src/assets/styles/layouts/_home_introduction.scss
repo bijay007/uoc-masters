@@ -1,0 +1,19 @@
+.curriculum-introduction {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.5rem;
+  ul {
+    list-style-type: none;
+    li:before {
+      font-family: "Font Awesome 5 Brands";
+      content: "\f066";
+    }
+  }
+  @media (max-width: $mqMinWidth) {
+    align-items: center;
+    text-align: center;
+    ul {
+      padding: 0;
+    }
+  }
+}
